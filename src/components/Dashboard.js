@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {connect} from 'react-dom';
+import {connect} from 'react-redux';
 
 class Dashboard extends Component {
   render() {
     const {tweetsIds} = this.props;
     return (
       <div>
-        <h3 classname='center'>Your Timeline</h3>
+        <h3 className='center'>Your Timeline</h3>
         <ul className='dashboard-list'>
           {tweetsIds.map(id => (
             <li key={id}>
