@@ -4,13 +4,14 @@ import {connect} from 'react-redux';
 
 class App extends Component {
   componentDidMount() {
-    const {dispatch} = this.props;
-
-    dispatch(handleInitialData());
+    this.props.handleInitialData();
   }
   render() {
     return <div>Starter Code</div>;
   }
 }
 
-export default connect()(App);
+export default connect(
+  null,
+  {handleInitialData}
+)(App);
